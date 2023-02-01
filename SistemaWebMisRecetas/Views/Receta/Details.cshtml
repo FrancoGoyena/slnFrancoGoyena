@@ -1,0 +1,40 @@
+﻿@model SistemaWebMisRecetas.Models.Receta
+@{
+    ViewData["Title"] = "Detalles de la receta";
+}
+    <h2>Detalles de la receta</h2>
+    @Html.ActionLink("Recetas","Index","Receta")
+    @Html.ActionLink("Inicio","Index","Home")
+
+    <p>
+        @Html.DisplayNameFor(model=>model.Titulo)
+        @Html.DisplayFor(model=>model.Titulo)
+    </p>
+    <p>
+        @Html.DisplayNameFor(model=>model.Categoria)
+        @Html.DisplayFor(model=>model.Categoria)
+    </p>
+    <p>
+        @Html.DisplayNameFor(model=>model.Ingredientes)
+        @Html.DisplayFor(model=>model.Ingredientes)
+    </p>
+    <p>
+        @Html.DisplayNameFor(model=>model.Instrucciones)
+        @Html.DisplayFor(model=>model.Instrucciones)
+    </p
+    <p>
+        @Html.DisplayNameFor(model=>model.Autor)
+        @Html.DisplayFor(model=>model.Autor)
+    </p>
+    <p>
+        @Html.DisplayNameFor(model=>model.Apellido)
+        @Html.DisplayFor(model=>model.Apellido)
+    </p>
+    <p>
+        @Html.DisplayNameFor(model=>model.Edad)
+        @Html.DisplayFor(model=>model.Edad)
+    </p>
+    <p>
+        @Html.DisplayNameFor(model=>model.Email)
+        @Html.DisplayFor(model=>model.Email)
+    </p>

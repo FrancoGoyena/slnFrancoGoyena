@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/main.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <div class="Top">
+        <div id="header">
+            <h1>MIS RECETAS</h1>
+        </div>
+        <div id="nav">
+            <p>@Html.ActionLink("Inicio","Index","Home")</p>
+            <p>@Html.ActionLink("Recetas","Index","Receta")</p>
+        </div>
+    </div>
+    <div class="main">
+        
+        <div id="content">
+            @RenderBody()
+        </div>
+        <div id="sidebar">
+            @if (IsSectionDefined("SideBar"))
+            {
+                @RenderSection("SideBar")
+            }
+        </div>
+    </div>
+
+        <div id="footer">
+            <p>misrecetas@web.com</p>
+        </div>
+    
+</body>
+</html>

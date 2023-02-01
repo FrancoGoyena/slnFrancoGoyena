@@ -1,0 +1,59 @@
+﻿@model IEnumerable<SistemaWebMisRecetas.Models.Receta>
+@{
+    ViewData["Title"] = "Lista de recetas";
+}
+<div class="nuevo">
+    @Html.ActionLink("Nueva", "Create","Receta")
+</div>
+    <table class="tabla">
+        <div class="tablacontenido">
+        <tr>
+            <th>@Html.DisplayNameFor(m=> m.Id)</th>
+            <th>@Html.DisplayNameFor(m=> m.Titulo)</th>
+            <th>@Html.DisplayNameFor(m=> m.Categoria)</th>
+            <th>@Html.DisplayNameFor(m=> m.Ingredientes)</th>
+            <th>@Html.DisplayNameFor(m=> m.Instrucciones)</th>
+            <th>@Html.DisplayNameFor(m=> m.Autor)</th>
+            <th>@Html.DisplayNameFor(m=> m.Apellido)</th>
+            <th>@Html.DisplayNameFor(m=> m.Edad)</th>
+            <th>@Html.DisplayNameFor(m=> m.Email)</th>
+        </tr>
+        </div>
+        @foreach (var receta in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(m=> receta.Id)
+                </td>
+                <td>
+                    @Html.ActionLink(receta.Titulo, "Details", "Receta",new{id=receta.Id})
+
+                </td>
+                <td>
+                    @Html.DisplayFor(m=> receta.Categoria)
+                </td>
+                <td>
+                    @Html.DisplayFor(m=> receta.Ingredientes)
+                </td>
+                <td>
+                    @Html.DisplayFor(m=> receta.Instrucciones)
+                </td>
+                <td>
+                    @Html.DisplayFor(m=> receta.Autor)
+                </td>
+                <td>
+                    @Html.DisplayFor(m=> receta.Apellido)
+                </td>
+                <td>
+                    @Html.DisplayFor(m=> receta.Edad)
+                </td>
+                <td>
+                    @Html.DisplayFor(m=> receta.Email)
+                </td>
+            </tr>
+            
+            
+        }
+    </table>
+
+                <h2>@Html.ActionLink("Salir del filtro","Index","Receta")</h2>
