@@ -15,7 +15,7 @@ namespace SistemaWebMisRecetas.Models
         [Required(ErrorMessage = "Los ingredientes son obligatorios.")]
         [DataType(DataType.MultilineText)]
         public string Ingredientes { get; set; }
-        [Required(ErrorMessage = "Las instrucciones son obligatorios.")]
+        [Required(ErrorMessage = "Las instrucciones son obligatorias.")]
         [DataType(DataType.MultilineText)]
         public string Instrucciones { get; set; }
         [Required(ErrorMessage = "El autor es obligatorio.")]

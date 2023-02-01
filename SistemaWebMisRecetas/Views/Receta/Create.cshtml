@@ -19,12 +19,14 @@
             </p>
             <p>
                 @Html.LabelFor(model=>model.Ingredientes)
-                @Html.TextBoxFor(model=>model.Ingredientes)
+                <textarea rows="5" cols="60" name="Ingredientes">
+                </textarea>
                 @Html.ValidationMessageFor(model=>model.Ingredientes)
             </p
             <p>
                 @Html.LabelFor(model=>model.Instrucciones)
-                @Html.TextBoxFor(model=>model.Instrucciones)
+                <textarea rows="5" cols="60" name="Instrucciones">
+                </textarea>
                 @Html.ValidationMessageFor(model=>model.Instrucciones)
             </p>
             <p>
