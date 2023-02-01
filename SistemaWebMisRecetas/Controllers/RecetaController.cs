@@ -63,10 +63,19 @@ namespace SistemaWebMisRecetas.Controllers
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<Receta>> GetByAutor(string apellido)
+        public ActionResult<IEnumerable<Receta>> GetByApellido(string apellido)
         {
             var receta = (from a in context.Recetas
                             where a.Apellido == apellido
+                          select a).ToList();
+            return View("GetByAutor", receta);
+        }
+
+        [HttpGet]
+        public ActionResult<IEnumerable<Receta>> GetByAutor(string autor)
+        {
+            var receta = (from a in context.Recetas
+                          where a.Autor == autor
                           select a).ToList();
             return View("GetByAutor", receta);
         }

@@ -39,10 +39,10 @@
                     @Html.DisplayFor(m=> receta.Instrucciones)
                 </td>
                 <td>
-                    @Html.DisplayFor(m=> receta.Autor)
+                    @Html.ActionLink(receta.Autor, "GetByAutor", "Receta",new{autor=receta.Autor})
                 </td>
                 <td>
-                    @Html.ActionLink(receta.Apellido, "GetByAutor", "Receta",new{apellido=receta.Apellido})
+                    @Html.ActionLink(receta.Apellido, "GetByApellido", "Receta",new{apellido=receta.Apellido})
                 </td>
                 <td>
                     @Html.DisplayFor(m=> receta.Edad)
